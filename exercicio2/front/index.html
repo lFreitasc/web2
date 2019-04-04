@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+    <h1>Todo List</h1>
+    <div id="feed_me"></div>
+    <div class="container">
+        <form>
+            <input type="text" name="activity" id="activity"value="">
+            <select id="grade">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <input type="submit" id="submit" value="Adicionar">
+        </form>
+    </div>
+    <script>
+        window.onload = function(){
+            document.getElementById('submit').onclick = function(e){
+                let atividade = document.getElementById('activity').value
+                let grade = document.getElementById('grade').value
+                alert(atividade + " " +  grade)
+                /*
+                    Alterar para alteração no mongo
+                */
+            }
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
