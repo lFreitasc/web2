@@ -1,4 +1,4 @@
-let collection = require('../mongo')
+import collection from '../back/mongo'
 
 collection.add('TCC', 3)
 collection.add('Data', 2)
