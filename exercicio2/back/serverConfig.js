@@ -1,10 +1,9 @@
 let express = require('express')
 let app = express()
 let fs = require('fs')
-let cwd = '../front'
 
 app.get('/', function(req, res){
-    fs.readFile(cwd + '/index.html', function(err, data){
+    fs.readFile('../front/index.html', function(err, data){
         if(err) {console.log(err)}
         res.end(data)
     })
@@ -14,9 +13,9 @@ app.get('/', function(req, res){
 app.get('*', function(req, res){
     dir = req.url
     if(req.headers['accept'].search('text/html') >= 0){
-        fs.readFile(cwd + req.url + '.html', function(err, data){
+        fs.readFile('../front/pages' + req.url + '.html', function(err, data){
             if(err){
-                fs.readFile(cwd + '/error.html', function(err,data){
+                fs.readFile('../front/pages/error.html', function(err,data){
                     res.end(data)
                 })
             }else{
@@ -24,7 +23,7 @@ app.get('*', function(req, res){
             }
         })
     }else{
-        fs.readFile(cwd + req.url, function(err, data){
+        fs.readFile('../front/src' + req.url, function(err, data){
             if(err) console.log(err)
             res.end(data)
         })
