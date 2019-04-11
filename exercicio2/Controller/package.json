@@ -1,0 +1,16 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serverConfig.js",
+  "scripts": {
+    "test": "node serverConfig.js"
+  },
+  "author": "Lucas F. Costa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "mongodb": "^3.2.3"
+  }
+}
