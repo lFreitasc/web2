@@ -9,8 +9,9 @@
   "author": "Lucas F. Costa",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "hbs": "^4.0.3",
+    "hbs": "^4.0.4",
     "mongodb": "^3.2.3"
   }
 }

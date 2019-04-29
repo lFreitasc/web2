@@ -10,9 +10,9 @@
 <body>
     <h1>Todo List</h1>
     <div class="container">
-        <form>
+        <form action="/create" method="POST">
             <input type="text" name="activity" id="activity"value="">
-            <select id="grade">
+            <select name="grade" id="grade">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -27,19 +27,12 @@
             <input type="submit" id="submit" value="Adicionar">
         </form>
     </div>
-    <div id="feed_me"></div>
-    <script>
-        window.onload = function(){
-            document.getElementById('submit').onclick = function(e){
-                let atividade = document.getElementById('activity').value
-                let grade = document.getElementById('grade').value
-                alert(atividade + " " +  grade)
-                /*
-                    Alterar para alteração no mongo
-                */
-            }
-        }
-    </script>
-    <script src="main.js" type="module"></script>
+    <div id="feed">
+        <ul>
+            {{#each atividades}}
+            <li>{{activity}} - {{grade}} <button value="{{activity}}">X</button> </li>
+            {{/each}}
+        </ul>
+    </div>
 </body>
 </html>
